@@ -1,0 +1,160 @@
+:root {
+    --grey: rgba(53, 47, 68, .4);
+    --dark-grey: rgba(0, 0, 0, 0.6);
+    --white: rgba(255, 255, 255, 1);
+    --white-alpha: rgba(255, 255, 255, .7);
+
+    --yellow: rgb(251, 240, 178);
+    --pink: rgb(255, 199, 234);
+    --purple: rgb(216, 180, 248);
+    --blue: rgb(202, 237, 255);
+    --dark-navy: rgb(64, 66, 88);
+    --navy: rgb(71, 78, 104);
+    --light-navy: rgb(80, 87, 122);
+    --lighter-navy: rgb(107, 114, 142);
+
+    --bl-font: rgba(0, 0, 0, 0.8);
+    --grey-font: rgba(0, 0, 0, 0.5);
+    --wh-font: rgba(255, 255, 255, 1);
+
+    --transition: .3s;
+    --box-shadow: 0 0 7px rgba(107, 114, 142, .3);
+    --margin: 20px;
+    --border-radius: 12px;
+}
+
+
+
+.box{
+   /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+body{
+    margin: 0;
+    background-color:  #00006b;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.header h1{
+    font-weight: 800;
+}
+.inputbox{
+    display: flex;
+    /* border: 1px solid black; */
+    margin-top: 10px;
+    padding: 20px 30px;
+    background-color: #5353ad;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px 10px rgba(0,0,0,0.2);
+}
+.search{
+    padding: 15px;
+    width: 200px;
+    border-radius: 40px;
+    border: 1px solid gray;
+    outline: none;
+    margin-right: 2px;
+    font-size: large;
+    font-weight: 800;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    transition: outline 0.18s ease-in;
+}
+.search::placeholder{
+    color: rgb(88, 88, 88);
+    overflow: hidden;
+}
+.search:focus{
+    outline: 3px solid #2222aa;
+    font-weight: 800;
+    color: rgb(88, 88, 88);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.inputbox > button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #2222aa;
+    margin-left: 5px;
+    padding: 25px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.18s ease-in;
+}
+.inputbox > button:hover{
+    background-color: #0b0ba6;
+}
+.inputbox > button > i{
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.outputbox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+.outputbox > p{
+    font-size: 20px;
+    font-weight: 800;
+    margin: 10px;
+}
+.outputbox i{
+    font-size: 80px;
+    margin: 10px;
+}
+
+.loader {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 200px;
+    border-radius: 20px;
+    background: #4d4dd3;
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    transition: all 0.18s ease-in;
+}
+
+.loader.hide {
+    opacity: 0;
+    visibility: hidden;
+    z-index: -999;
+}
+
+.loader > .icon {
+    font-size: 3em;
+    animation: rotate .7s linear infinite;
+    margin: 0;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.loader .description {
+    font-size: 1.5em;
+    margin: 0;
+}
+
+
