@@ -17,9 +17,6 @@ query.addEventListener('keydown', (e) => {
 });
 
 
-
-
-
 async function fetchword(){
     const word = query.value.toLowerCase();
     if(!word){
@@ -62,17 +59,19 @@ function displayloader(){
 }
 
 function displayerror(err) {
-    const error = document.createElement('div');
-    error.classList.add('error');
-    error.innerHTML = `
-      ${Number(err.toString().match(/\d{3}$/)) === 404
-      ? `<h4 class="reason">Sorry, I couldn't find it.</h4>
-          <p class="suggestion">Please check your spelling or try again later.</p>`
-      : ''}
-    `;
-    outputbox.appendChild(error);
-    return error;
+  const error = document.createElement('div');
+  error.classList.add('error');
+  error.innerHTML = `
+    ${Number(err.toString().match(/\d{3}$/)) === 404
+    ? `<h4 class="reason">Sorry, I couldn't find it.</h4>
+        <p class="suggestion">Please check your spelling or try again later.</p>`
+    : `<p class="default-message">An error occurred. Please try again.</p>`}
+  `;
+  outputbox.appendChild(error);
+  return error;
 }
+
+
 //Function to call API and get the definition of a word from Oxford Dictionaries
 function getdefinition(words) {
      return words.map((wordObj) =>

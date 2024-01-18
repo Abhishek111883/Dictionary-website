@@ -157,4 +157,99 @@ body{
     margin: 0;
 }
 
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 50px;
+    padding: 5px 20px;
+    background-color: #5353ad;
+    border-radius: 10px;
+    border: 1px solid white;
+    box-shadow: 10px 10px 10px 10px rgba(0,0,0,0.2);
+    width: 400px;
+    transition: all 0.18s ease-in-out;
+}
+.card:hover{
+    transform: scale(1.1);
+}
+
+.card .word-audio-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 98%;
+}
+
+.card .word-audio-container .play-audio {
+    border: none;
+    background-color: #0b0ba6;
+    width: 37px;
+    height: 37px;
+    border-radius: 50%;
+    color: gray;
+    box-shadow: 1px 1px 5px black ;
+    cursor: pointer;
+}
+.card .word-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.card .word-audio-container .play-audio i {
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+.card .word-container .word {
+    font-size: 1.4rem;
+}
+
+.card .word-container .part-of-speech {
+    color: rgb(201, 193, 193);
+}
+
+.card .phonetic-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5px;
+    color: var(--lighter-navy);
+    margin-bottom: 10px;
+}
+
+.card .phonetic-container .phonetic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1px;
+    border: 2px solid var(--purple);
+    border-radius: var(--border-radius);
+    padding: 0 5px;
+    font-size: .7rem;
+    background: none;
+    cursor: pointer;
+    color: var(--light-navy);
+}
+
+.card .phonetic-container .phonetic:hover {
+    background: var(--purple);
+}
+
+.card .phonetic-container .phonetic i {
+    font-size: .6rem;
+}
+
+
+
+
+
+
+
+  
+
+
+
 
