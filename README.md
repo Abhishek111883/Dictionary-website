@@ -36,11 +36,11 @@ Welcome to the English Dictionary Website! This web-based dictionary provides us
 
 **Figure 1: Homepage of the English Dictionary Website**
 
-![Homepage](screenshots/homepage.png)
+![Homepage](screenshots/homeview.png)
 
 **Figure 2: Search result for the word "example"**
 
-![Search Result](screenshots/search_result.png)
+![Search Result](screenshots/resultview.png)
 
 ## Dependencies
 
